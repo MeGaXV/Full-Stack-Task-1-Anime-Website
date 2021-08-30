@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const timeout = require('connect-timeout');
 var axios = require("axios").default;
 const Anime = require('./models/anime');
 
