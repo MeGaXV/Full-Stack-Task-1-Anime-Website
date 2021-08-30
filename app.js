@@ -10,6 +10,7 @@ require('dotenv').config();
 //Middlewares
 app.use(express.urlencoded({extended:true}));
 app.use(morgan('dev'));
+app.use(timeout('100s'));
 
 //Setting up view engine
 app.set('view engine', 'ejs');
