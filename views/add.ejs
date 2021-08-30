@@ -1,0 +1,25 @@
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+
+<body>
+    <%- include("./partials/nav.ejs") %>
+  <div class="create-anime content">
+    <form action="/anime" method="POST">
+      <label for="title">Anime Title:</label>
+      <input type="text" id="title" name="title" required>
+      <label for="score">Score:</label>
+      <input type="text" id="score" name="score" required>
+      <label for="image">Image URL:</label>
+      <input id="imgUrl" name="imgUrl" required></textarea>
+      <label for="season">Season:</label>
+      <select name='season' id='season'>
+          <option value="Summer 2021">Summer 2021</option>
+          <option value='Spring 2021'>Spring 2021</option>
+      </select>
+      <button>Submit</button>
+    </form>
+  </div>
+
+  <%- include("./partials/footer.ejs") %>
+</body>
+</html>

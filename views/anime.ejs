@@ -1,0 +1,30 @@
+<html lang='en'>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <% if(anime.length>0 && anime.length!= null) {%>
+            <table width=100% align="center">
+                <tr><td align="center" colspan=2><h2>Added Anime</h2></td></tr>
+                <% anime.forEach((i)=> {%>
+
+                    <tr>
+                        <td align="center">
+                            <img src=<%=i.imgUrl%>>
+                        </td>
+                        <td align="center" width= '100%'>
+                            <h3>Title: <%=i.title%></h3>
+                            <h4>Season Rating: <%=i.score%></h4>
+                            <div align="justified">Season: <%= i.season %>  </div>
+                        </td>
+
+                    </tr>
+                
+                <%})%>
+            </table>   
+        <%} else {%>
+            An error occued :(
+        <%}%>
+        <%- include("./partials/footer.ejs") %>
+    </body>
+    
+</html>

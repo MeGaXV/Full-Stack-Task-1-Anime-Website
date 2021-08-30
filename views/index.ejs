@@ -1,0 +1,30 @@
+<html lang='en'>
+    <%- include("./partials/head.ejs") %>
+    <body>
+        <%- include("./partials/nav.ejs") %>
+        <% if(anime.length>0) {%>
+            <table width=100% align="center">
+                <tr><td align="center" colspan=2><h2>Top 10 Anime of the Season</h2></td></tr>
+                <% for (let i = 0 ; i < 10 ;i++) {%>
+
+                    <tr>
+                        <td align="center">
+                            <img src=<%=anime[i].image_url%>>
+                        </td>
+                        <td align="center" width= '100%'>
+                            <h3>Title: <%=anime[i].title%></h3>
+                            <h4>Season Rating: <%=anime[i].score%></h4>
+                            <div align="justified">About: <%= anime[i].synopsis %>  </div>
+                        </td>
+
+                    </tr>
+                
+                <%}%>
+            </table>   
+        <%} else {%>
+            An error occued :(
+        <%}%>
+        <%- include("./partials/footer.ejs") %>
+    </body>
+    
+</html>
