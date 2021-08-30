@@ -65,8 +65,8 @@ app.get('/spring', (req, res)=>{
     url: 'https://jikan1.p.rapidapi.com/season/2021/spring',
     headers: {
         'x-rapidapi-host': 'jikan1.p.rapidapi.com',
-        'x-rapidapi-key': '082c38aeb2msh8e8a8ba6f7442ecp115048jsnf109175c3ec9'
-        
+        'x-rapidapi-key': process.env.API_KEY
+
     }
     };
 
@@ -87,7 +87,7 @@ app.get('/summer', (req, res)=>{
     url: 'https://jikan1.p.rapidapi.com/season/2021/summer',
     headers: {
         'x-rapidapi-host': 'jikan1.p.rapidapi.com',
-        'x-rapidapi-key': process.env.API_KEY
+        'x-rapidapi-key': '082c38aeb2msh8e8a8ba6f7442ecp115048jsnf109175c3ec9'
     }
     };
 
